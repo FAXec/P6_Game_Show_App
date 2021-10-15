@@ -18,12 +18,13 @@ let phrases = ["Quick and Dirty",
 
                 //The function declaration chooses random phrases from phrases array
 function getRandomPhraseAsArray(arr) {
-    randomNumber = [Math.floor(Math.random() * phrases.length)];  // random number is enerated suing array length
-    stringArr = phrases[randomNumber];  //select string from the array using the random number generated above
-    arr = stringArr.split(", "); //Split the chosen phrase array into its own separate array separated by ,
-    return arr;     
+    const randomNumber = Math.floor(Math.random() * phrases.length);
+    const selectPhrase = arr[randomNumber];
+    x = selectPhrase.split(",");
+    console.log(x);
  };
 
+ const randomPhrase = getRandomPhraseAsArray(phrases)
 
 
 
@@ -40,4 +41,4 @@ function getRandomPhraseAsArray(arr) {
 
 
 
- 
+
