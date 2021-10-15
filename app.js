@@ -23,6 +23,8 @@ function getRandomPhraseAsArray(arr) {
     return arr;     
  };
 
+
+ 
 const firstFunction = getRandomPhraseAsArray(); 
 
 let character = 0;
