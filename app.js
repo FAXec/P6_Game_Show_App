@@ -1,12 +1,13 @@
 const getKeyboard = document.getElementById("qwerty");
-const getPhrase = document.getElementById(phrase);
-const startButton = document.getElementsByClassName(".btn__reset");
+const getPhrase = document.getElementById("phrase");
+const startButton = document.querySelector(".btn__reset");
+const overlay = document.getElementById("overlay");
 
 const missed = 0;
         
             //This event listener hides the overlay when user clicks start Game button
 startButton.addEventListener("click", () => { 
-        startButton.style.dislay = "none"});
+        overlay.style.display = "none"});
 
             //Created an array of five phrases and labeled it as phrases 
 let phrases = ["Quick and Dirty", 
@@ -24,70 +25,19 @@ function getRandomPhraseAsArray(arr) {
  };
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
-const firstFunction = getRandomPhraseAsArray(); 
-
-let character = 0;
-
-function addPhraseToDisplay(firstFunction) {
-        for (let i = 0; i < phrases.length; i++){
-        let li = document.createElement("li");
-        li.push(character);
-        let ul = document.getElementsByTagName("ul");
-        ul.appendchild("li");
-       if (character == "arr" && !== " " ) {
-        li[i].classList.add("letter");
-       } else {
-        li[i].classList.add("space");
-       }
-     
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function checkLetter(buttonclick) {
-//     const allLI = document.querySelectorAll("li");
-//     let match = 0;
-    
-//     for( let i = 0; i < allLI.length; i++ ){
-//         buttonclick = input.value
-//         if(input.value === allLI ){ 
-//             li.classList.add("show");
-//         } else {
-//             li.classList.add("match");
-        
-//     }
-
-//     return match
-// }
-
-// const letter = checkLetter(buttonclick);
-
-// getKeyboard.addEventListener("click", (e) =>{
-
-//     if(){}
-
-
-// }
-// )
