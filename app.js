@@ -3,6 +3,7 @@ const getPhrase = document.getElementById("phrase");
 const startButton = document.querySelector(".btn__reset");
 const overlay = document.getElementById("overlay");
 
+
 const missed = 0;
         
             //This event listener hides the overlay when user clicks start Game button
@@ -18,15 +19,36 @@ let phrases = ["Quick and Dirty",
 
                 //The function declaration chooses random phrases from phrases array
 function getRandomPhraseAsArray(arr) {
-    const randomNumber = Math.floor(Math.random() * phrases.length);
+    const randomNumber = Math.floor(Math.random() * arr.length);
     const selectPhrase = arr[randomNumber];
-    x = selectPhrase.split(",");
-    console.log(x);
+    selectPhrase.split("");
+    
  };
 
  const randomPhrase = getRandomPhraseAsArray(phrases)
 
+ let character = 0;
 
+ function addPhraseToDisplay(arr) {
+     for (let i=0; i=arr.length; i++){
+        const ul = document.querySelector("ul")
+        const li = document.createElement("li");
+        
+        getphrase.innerHTML = ul.appendChild(li);
+
+        if(){
+           li.className ="'letter";
+        } 
+        else 
+        {
+            li.className = "space";
+        }
+
+     }
+     
+ }
+
+const randomDisplay = addPhraseToDisplay(randomPhrase);
 
 
 
