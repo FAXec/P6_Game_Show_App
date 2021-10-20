@@ -48,10 +48,11 @@ function getRandomPhraseAsArray(arr) {
 
 const randomDisplay = addPhraseToDisplay(randomPhrase);
 
-const match = 0; 
+
 
 function checkLetter(clicked) {
     const checkLetter = document.querySelectorAll("li");
+    const match = 0; 
         for(let i = 0; i < li.length; i++ ){
         if (clicked.textContent === li.textContent) {
             li[i].className = "show";
