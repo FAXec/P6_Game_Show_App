@@ -21,7 +21,7 @@ let phrases = ["Quick and Dirty",
 function getRandomPhraseAsArray(arr) {
     const randomNumber = Math.floor(Math.random() * arr.length);
     const selectPhrase = arr[randomNumber];
-    selectPhrase.split("");
+    return selectPhrase.split("");
     
  };
 
@@ -30,25 +30,37 @@ function getRandomPhraseAsArray(arr) {
  let character = 0;
 
  function addPhraseToDisplay(arr) {
-     for (let i=0; i=arr.length; i++){
         const ul = document.querySelector("ul")
-        const li = document.createElement("li");
-        
-        getphrase.innerHTML = ul.appendChild(li);
 
-        if(){
-           li.className ="'letter";
-        } 
-        else 
-        {
+            for (let i = 0; i < arr.length; i++){
+              const li = document.createElement("li");
+              li.textContent = arr[i];
+              ul.appendChild(li);
+
+       if(arr[i] !== " "){
+            li.className = "letter";
+          } 
+          else {
             li.className = "space";
-        }
-
-     }
-     
+          }
+     }     
  }
 
 const randomDisplay = addPhraseToDisplay(randomPhrase);
+
+const match = 0; 
+
+function checkLetter(clicked) {
+    const checkLetter = document.querySelectorAll("li");
+        for(let i = 0; i < li.length; i++ ){
+        if (clicked.textContent === li.textContent) {
+            li[i].className = "show";
+            clicked.textContent = match;
+        }
+        return match;
+    }
+  
+}
 
 
 
