@@ -51,17 +51,34 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
 
 
 function checkLetter(clicked) {
-    const checkLetter = document.querySelectorAll("li");
-    const match = 0; 
-        for(let i = 0; i < li.length; i++ ){
-        if (clicked.textContent === li.textContent) {
-            li[i].className = "show";
-            clicked.textContent = match;
+    const checkLetter = document.querySelectorAll("ul.children");
+        let match = 0; 
+        for(let i = 0; i < checkLetter.length; i++ ){
+        if (clicked === checkLetter[i].textContent) {
+            checkLetter[i].classList.add("show");
+            match = clicked.textContent;
         }
         return match;
     }
   
 }
+
+
+const heart = document.querySelectorAll(".tries");
+ 
+ getKeyboard.addEventListener("click",(e) =>{
+        if (getKeyboard !== click || getKeyboard.className === "chosen") {
+                getKeyboard.classList.add("chosen");
+                const checkClicked = checkLetter(clicked);
+                for (let i = 0; i < heart.length; i ++) {
+                    if (checkClicked !== randomPhrase ) {
+                        heart[i].remove();                        
+                    } 
+           
+                }
+              
+        } 
+});
 
 
 
