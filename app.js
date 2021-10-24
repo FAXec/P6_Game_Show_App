@@ -49,21 +49,32 @@ function getRandomPhraseAsArray(arr) {
 const randomDisplay = addPhraseToDisplay(randomPhrase);
 
 
+/* Pseudocode for checkLetter
+    checkLetter(button)
+        Create variable and store all the ul.li elements in this variable
+        Create variable named match and give it initial value null
+      Loop through all of the li elements
+        If button text is equal to text in li element
+         add class show to the li element
+         and store the button text in match variable
+    complete loop and return variable match */    
 
-function checkLetter(clicked) {
-    const checkLetter = document.querySelectorAll("ul.children");
-        let match = 0; 
-        for(let i = 0; i < checkLetter.length; i++ ){
-        if (clicked === checkLetter[i].textContent) {
-            checkLetter[i].classList.add("show");
-            match = clicked.textContent;
+
+    
+     
+    function checkLetter(button) {   
+        const ulLetter = document.querySelectorAll("ul");
+         let match = 0; 
+        for(let i = 0; i < ulLetter.length; i++ ){
+        if (button === ulLetter[i].textContent) {
+            ulLetter[i].classList.add("show");
+            match = button.textContent;
         }
-        return match;
     }
-  
+    return match;
 }
 
-
+/*
 const heart = document.querySelectorAll(".tries");
  
  getKeyboard.addEventListener("click",(e) =>{
@@ -78,7 +89,7 @@ const heart = document.querySelectorAll(".tries");
                 }
               
         } 
-});
+}); */
 
 
 
