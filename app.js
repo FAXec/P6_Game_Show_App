@@ -27,7 +27,7 @@ function getRandomPhraseAsArray(arr) {
 
  const randomPhrase = getRandomPhraseAsArray(phrases)
 
- let character = 0;
+
 
  function addPhraseToDisplay(arr) {
         const ul = document.querySelector("ul")
@@ -63,7 +63,7 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
     
      
     function checkLetter(button) {   
-        const ulLetter = document.querySelectorAll("ul");
+        const ulLetter = document.querySelectorAll(".letter");     
          let match = 0; 
         for(let i = 0; i < ulLetter.length; i++ ){
         if (button === ulLetter[i].textContent) {
@@ -74,22 +74,40 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
     return match;
 }
 
-/*
-const heart = document.querySelectorAll(".tries");
- 
+/* Pseudocode for event listener
+    add click event listener to qwerty variable
+    if click doesnt take place on the button or button already has class chosen
+    add class chosen to button pressed
+    call checkletter function and store the results in a variable
+
+    if checkLetter function doesnt find a Letter 
+    remove one of the heart image
+    increment the missed counter
+
+*/
+
+
+const heart = document.querySelectorAll("img");
+
+
  getKeyboard.addEventListener("click",(e) =>{
-        if (getKeyboard !== click || getKeyboard.className === "chosen") {
-                getKeyboard.classList.add("chosen");
-                const checkClicked = checkLetter(clicked);
-                for (let i = 0; i < heart.length; i ++) {
-                    if (checkClicked !== randomPhrase ) {
-                        heart[i].remove();                        
-                    } 
-           
-                }
-              
-        } 
-}); */
+    let x = event.target;
+    if (x.tagName === "BUTTON" || x.className === "chosen") {
+        let buttonPressed = x.tagName; 
+        buttonPressed.classList.add = "chosen";
+        buttonPressed.disabled = true;
+
+        let letter = checkLetter(button);
+
+        if (letter = false) {
+               heart.src = images/lostHeart.png;
+        }
+        
+    }     
+        missed++;        
+
+}
+);
 
 
 
