@@ -87,13 +87,13 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
 */
 
 
-let heart = document.querySelectorAll("img");
+
 
 
  getKeyboard.addEventListener("click",(e) =>{
     let buttonPressed = event.target;
     if (buttonPressed.tagName === "BUTTON" || buttonPressed.className === "chosen") {
-        
+
         buttonPressed.classList.add = "chosen";
         buttonPressed.disabled = true;
 
@@ -101,15 +101,26 @@ let heart = document.querySelectorAll("img");
         // console.log(letterFound);
 
         if (letterFound == false) {
-               heart[missed].src = "images/lostHeart.png";
-               missed++;
+            let heart = document.querySelectorAll("img");
+            heart[missed].src = "images/lostHeart.png";
+            missed++;
         }
-        
     }     
-                
-
 }
 );
+
+
+/*Pseudocode checkWin function
+    create variable and store li elements with class name "letter"
+    create variable and storeli elements with class name "show"
+
+  
+
+
+
+
+
+*/
 
 
 
