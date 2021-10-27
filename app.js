@@ -4,7 +4,7 @@ const startButton = document.querySelector(".btn__reset");
 const overlay = document.getElementById("overlay");
 
 
-const missed = 0;
+let missed = 0;
         
             //This event listener hides the overlay when user clicks start Game button
 startButton.addEventListener("click", () => { 
@@ -87,24 +87,26 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
 */
 
 
-const heart = document.querySelectorAll("img");
+let heart = document.querySelectorAll("img");
 
 
  getKeyboard.addEventListener("click",(e) =>{
-    let x = event.target;
-    if (x.tagName === "BUTTON" || x.className === "chosen") {
-        let buttonPressed = x.tagName; 
+    let buttonPressed = event.target;
+    if (buttonPressed.tagName === "BUTTON" || buttonPressed.className === "chosen") {
+        
         buttonPressed.classList.add = "chosen";
         buttonPressed.disabled = true;
 
-        let letter = checkLetter(button);
+        let letterFound = checkLetter(buttonPressed);
+        // console.log(letterFound);
 
-        if (letter = false) {
-               heart.src = images/lostHeart.png;
+        if (letterFound == false) {
+               heart[missed].src = "images/lostHeart.png";
+               missed++;
         }
         
     }     
-        missed++;        
+                
 
 }
 );
