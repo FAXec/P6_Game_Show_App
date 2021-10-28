@@ -62,11 +62,11 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
 
     
      
-    function checkLetter(button) {   
-        const ulLetter = document.querySelectorAll(".letter");     
+    function checkLetter(button) {  
+       const ulLetter = document.querySelectorAll(".letter");     
          let match = 0; 
         for(let i = 0; i < ulLetter.length; i++ ){
-        if (button === ulLetter[i].textContent) {
+        if (button.textContent === ulLetter[i].textContent) {
             ulLetter[i].classList.add("show");
             match = button.textContent;
         }
@@ -85,9 +85,6 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
     increment the missed counter
 
 */
-
-
-
 
 
  getKeyboard.addEventListener("click",(e) =>{
