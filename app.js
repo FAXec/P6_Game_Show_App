@@ -129,8 +129,11 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
             missed++;
         }
     }     
+    checkWin();
 }
 );
+
+
 
 
 /*Pseudocode checkWin function
@@ -148,18 +151,18 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
 
 const winLetter = document.getElementsByClassName("letter");
 //console.log(winLetter)
-const winShow = document.querySelectorAll(".show");
-//console.log(winShow);
 
 
 function checkWin() {    
+    const winShow = document.querySelectorAll(".show");
+        //console.log(winShow);
     if(winLetter.length === winShow.length){              
         overlay.classList.add("win");
-        overlay.textContent = "Congratulations, you win";
+        overlay.textContent = "Congratulations 😀 , You Win!";
         overlay.style.display = "flex";
     }else if (missed >= 5 && winLetter !== winShow) {
         overlay.classList.add("lose");
-        overlay.textContent = "You lose, try again";
+        overlay.textContent = "You Lose ☹️ , Try Again!";
         overlay.style.display = "flex";        
     }
 }
