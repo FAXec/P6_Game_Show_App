@@ -134,8 +134,6 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
 );
 
 
-
-
 /*Pseudocode checkWin function
     create variable and store li elements with class name "letter"
     create variable and store li elements with class name "show"
