@@ -56,7 +56,7 @@ function getRandomPhraseAsArray(arr) {
 
 
  function addPhraseToDisplay(arr) {
-        const ul = document.querySelector("ul")
+        const ul = document.querySelector("#phrase ul")
 
             for (let i = 0; i < arr.length; i++){
               const li = document.createElement("li");
@@ -113,7 +113,7 @@ const randomDisplay = addPhraseToDisplay(randomPhrase);
 */
 
 
- getKeyboard.addEventListener("click",(e) =>{
+ getKeyboard.addEventListener("click",(event) =>{
     let buttonPressed = event.target;
     if (buttonPressed.tagName === "BUTTON" || buttonPressed.className === "chosen") {
 
